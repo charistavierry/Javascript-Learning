@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            firstName : "William",
+            middleName : "Fernando",
+            lastName : "Herly",
+            adress : {
+                country : "Indonesia",
+                city : "Jakarta"
+            },
+            hobbies : [
+                "Basket", "Games", "Coding"
+            ]
+        }
+
+        const json = JSON.stringify(person)
+        const jsonParse = JSON.parse(json)
+
+        console.info(json)
+        console.info(jsonParse)
+
+    </script>
+</body>
+</html>

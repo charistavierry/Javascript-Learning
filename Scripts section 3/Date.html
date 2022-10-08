@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+    <script>
+{
+    // create date
+        const date1 = new Date()
+        console.info(date1)
+
+        const date2 = new Date(2022, 09, 05)
+        console.info(date2)
+
+        const date3 = new Date(2022, 09, 05, 12, 05, 10, 123)
+        console.info(date3)
+
+        const date4 = new Date(1664915181027)
+        console.info(date4)
+}
+
+{
+    // epoch & unix timestamp
+        const date1 = new Date()
+        console.info(date1.getTime())
+
+        const date2 = new Date(2022, 09, 05)
+        console.info(date2.getTime())
+
+        const date3 = new Date(2022, 09, 05, 12, 05, 10, 123)
+        console.info(date3.getTime())
+
+        const date4 = new Date(1664915181027)
+        console.info(date4.getTime())
+
+        console.info(Date.now())
+}
+
+{
+    // date parsing
+        const parseTimeStamp = Date.parse("2022-09-05T03:36:00.1000+07:00")
+        console.info(parseTimeStamp)
+
+        const parseDate = new Date(parseTimeStamp)
+        console.info(parseDate)
+}
+
+{
+    // getter & setter
+
+    const date = new Date()
+
+    console.info(date.getFullYear())
+    console.info(date.getMonth())
+    console.info(date.getDate())
+    console.info(date.getHours())
+    console.info(date.getHours())
+    console.info(date.getMinutes())
+    console.info(date.getSeconds())
+    console.info(date.getMilliseconds())
+    console.info(date.getTimezoneOffset())
+}
+    </script>
+</body>
+</html>
