@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipe-data-array</title>
+</head>
+<body>
+    <script>
+
+    let arrayKosong = [];
+    let arrayNama = ["William", "Fernando", "Herly"];
+
+    const names = [];
+    names.push("Vierry");
+    names.push("Charista", "Herly");
+    names.push("Wiliam", "Fernando", "Herly");
+
+    names[0] = "Vivi";
+
+    console.table(names);
+    console.info(names.length);
+    console.info(names[0]);
+
+    delete names [2];
+    names[2] = "erly";
+    names.push(1,2,3);
+    names.push(["multidimension", "array"]);
+    names.push(4);
+
+    console.table(names);
+    </script>
+</body>
+</html>

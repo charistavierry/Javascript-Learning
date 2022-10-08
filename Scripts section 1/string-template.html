@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string-template</title>
+</head>
+<body>
+    <script>
+        const fullName = "william fernando herly";
+        const firstName = "Wiliam";
+        const middleName = "fernando";
+        const lastName = "herly";
+        const template = `name : ${firstName} ${middleName} ${lastName}`; //contoh backtik
+        const verLama = "name : "+ firstName + " " + middleName + " " + "lastName";
+
+        console.info(template);
+
+        const nilai = 90;
+        const template2 = `name : ${fullName}, Lulus : ${nilai > 70}`;
+        console.info(template2);
+
+        const multiline = `william fernando herly
+        biasa dipanggil willi
+        nama awal vierry charista
+        ada juga yang manggil vivi
+        atau tata`;
+
+        document.writeln("<pre>");
+        document.writeln(multiline);
+        document.writeln("</pre>");
+    </script>
+</body>
+</html>

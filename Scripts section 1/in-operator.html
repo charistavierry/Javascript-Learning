@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In operator</title>
+</head>
+<body>
+    <script>
+
+    const person = {
+        firstName: "Vierry",
+        lastName: "Herly"
+    };
+
+    if ("firstName" in person) {
+        alert(`hello ${person.firstName}`);
+    } else {
+        alert("hello");
+    }
+
+    const student = {
+        nameFirst: "William",
+        nameMiddle: "Fernando",
+        nameLast: "Herly"
+    };
+
+    if ("nameFirst" in student) {
+        alert(`hello ${student.nameFirst}`);
+    } else {
+        alert("hello");
+    };
+
+    const profile = [null, "william", null];
+    const result = 0 in profile;
+    document.writeln(`<p>${result}</p>`);
+    </script>
+</body>
+</html>

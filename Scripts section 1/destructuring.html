@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+    <script>
+
+        // destructuring dalam array
+
+    {
+            const names = ["william", "fernando", "herly", "vierry", "charista"]
+        const [firstNames, middleName, lastName, ...etc] = names
+
+        console.info(firstNames);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(etc);
+    }
+
+        // destructuring dalam object
+
+    {
+            const person = {
+            namaSatu : "william",
+            namaDua : "Vierry",
+            address : {
+                street : "Man 6",
+                city : "Jakarta",
+                country : "Indonesia"
+            },
+            hobby : "Basket",
+            Pacar : "ga punya"
+        }
+
+        const {namaSatu, namaDua, address: {street, city, country}, ...etcs} = person
+        console.info(street)
+    }
+
+        // destructuring dalam function parameter object
+
+    {
+        function displayName({firstNames, middleName, lastName}) {
+            console.info(firstNames);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        const person = {
+            firstNames : "william",
+            middleName : "fernando",
+            lastName : "herly"
+        }
+
+        displayName(person)
+
+    }
+
+        // destructuring dalam function parameter array
+    {
+        function sum([first, second]) {
+            return first + second
+        }
+
+        console.info(sum([1,1]));
+        console.info(sum([10,10]));
+    }
+
+    // default value destructuring array
+
+    {
+        const names = ["william", "fernando"]
+        const [firstNames, middleName, lastName = "herly"] = names;
+
+        console.info(firstNames);
+        console.info(middleName);
+        console.info(lastName);
+    }
+
+    // default value destructuring object
+
+    {
+        const person = {
+            firstNames : "william",
+            middleName : "fernando",
+            contoh : buat => null,
+            fungsi : function() {
+                return "made by love"
+            }
+        }
+        
+        const {firstNames, middleName, lastName = "herly", ...etc} = person
+
+        console.info(firstNames);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(etc);
+    }
+
+    // destructuring ubah variable dalam property
+    {
+        const person = {
+            firstNames : "william",
+            middleName : "fernando",
+        }
+        
+        const {firstNames:namaSatu, middleName:namaDua, lastName = "herly", ...contoh} = person
+
+        console.info(namaSatu);
+        console.info(namaDua);
+        console.info(lastName);
+    }
+    </script>
+</body>
+</html>

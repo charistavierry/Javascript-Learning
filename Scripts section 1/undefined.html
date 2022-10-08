@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined</title>
+</head>
+<body>
+    <script>
+
+    let vierry = "Vi";
+    if (vierry === undefined) {
+        alert("UNDEFINED");
+    } else {
+        alert("DEFINED");
+    }
+
+    const names1 = ["William, Fernando"];
+    delete names1[0]
+    if (names1[0] === undefined) {
+        console.log("ARRAY UNDEFINED");
+    } else {
+        console.log("ARRAY DEFINED");
+    }
+
+    const person = {};
+    if (person.name === undefined) {
+        console.log("OBJECT UNDEFINED");
+    } else {
+        console.log("OBJECT DEFINED");
+    }
+    </script>
+</body>
+</html>
